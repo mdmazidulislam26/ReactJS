@@ -1,17 +1,13 @@
+import { useState } from 'react';
 import './App.css'
 
 function App() {
 
-  let count = 0;
+  let [count, setCounter] = useState(0);
 
-  let addValue = () => {
-    count= count + 1;
-    console.log(count);
-  }
-  let subValue = () => {
-    count = count - 1;
-    console.log(count);
-  }
+  let addValue = () => setCounter(++count);
+
+  let subValue = () => setCounter(--count);
 
   return (
     <>
