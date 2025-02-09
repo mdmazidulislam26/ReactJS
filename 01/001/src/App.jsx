@@ -5,9 +5,21 @@ function App() {
 
   let [count, setCounter] = useState(0);
 
-  let addValue = () => setCounter(++count);
+  let addValue = () => {
+    if (count < 20) {
+      setCounter(++count);
+    }else{
+      setCounter("boka coda ne tui")
+    }
+  }
 
-  let subValue = () => setCounter(--count);
+  let subValue = () => {
+    if (count > 0) {
+      setCounter(--count);
+    }else{
+      setCounter("boka coda ne tui")
+    }
+  };
 
   return (
     <>
